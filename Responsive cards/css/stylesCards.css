@@ -1,0 +1,98 @@
+body {
+    min-height: 100vh;
+    padding: 0 5%;
+    background-color: #eee;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* THE CARDS */
+.container {
+    /* width: 95vw; */
+    max-width: 1200px;
+
+    display:grid;
+    grid-template-columns: repeat(3, minmax(238px, 295px)); 
+    justify-content: center;
+    gap: 7%;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    position: relative;
+}
+
+.card__top, .card__bottom {
+    box-shadow: 10px 10px 20px #bbb;
+    border-radius: 5px;
+}
+
+.card__top {
+    display:flex; 
+    justify-content: center;
+    height: 150px;
+    align-items: center;
+}
+
+.card1 .card__top {
+    background-color: #ff0000;
+}
+
+.card2 .card__top {
+    background-color: #4267b2;
+}
+
+.card3 .card__top {
+    background-color: #e1306e ;
+}
+
+.card__top i {
+    color: #eee;
+    font-size: 60px;
+    transition: .7s;
+}
+
+.card__bottom {
+    width: minmax(238px, 295px);
+    height: 150px;
+    padding: 10px 10px;
+    
+    background-color: #eee;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+
+    position: relative;
+    z-index: -100;
+    transform: translateY(-90%);
+
+}
+
+.card__bottom p {
+    font-family:'Montserat', sans-serif;
+    font-size: 15px;
+}
+
+/* the effect */
+.card__top {
+    transition:  transform 500ms;
+}
+
+.card:hover .card__top{
+    transform: translateY(-100px);
+}
+
+.card__bottom {
+    transition:  transform 500ms;
+}
+
+.card:hover .card__bottom {
+    transform: translateY(-100px);
+}
