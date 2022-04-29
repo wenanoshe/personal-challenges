@@ -1,0 +1,53 @@
+/* === Typography === */
+$noto: 'Noto Sans JP', sans-serif;
+$monserrate: 'Montserrat', sans-serif;
+$assistant: 'Assistant', sans-serif;
+$noto-serif: 'Noto Serif', serif;
+
+/* colors */
+$lightSeeGreen: #20b2aa; //navigation bar
+$lsgLess: hsl(177, 70%, 30%); //navigation bar
+$white: #fff; //text
+$grayWhite: #f2f2f2; //bg-color
+$darkGrayGreen: #1D2F3D; //aside
+$darkGrayBlue: #1D2F3D; //link hover
+$black: #070716;
+/* === --------- === */
+
+/* === Colors ===
+ */
+$dark-blue: #0b0d17;
+$dark-blue-light: #333852;
+$desatured-dark-blue-light: #3338528c;
+$light-blue: #d0d6f9;
+$gray: #7d8096;
+$white : #fff;
+/* === --------- === */
+
+/* sizes */
+$pad-1: 1rem;
+$pad-2: 2rem;
+$pad-3: 3rem;
+$pad-4: 4rem;
+
+
+/* === Mixins === */
+@mixin flex($flex-direction: row, $justify-content: stretch, $align-items: stretch) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin before($width, $height, $position: absolute) {
+    content: '';
+    display: block;
+    width: $width;
+    height: $height;
+    position: $position;
+}
+
+@mixin transition($target, $duration: 300ms) {
+    transition: $target $duration;
+}
+/* === --------- === */
